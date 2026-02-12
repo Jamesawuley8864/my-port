@@ -1,0 +1,90 @@
+:root{
+    --bg-color: #f9f9f9;
+    --text-color:#000;
+    --btn-color:#ff9500;
+    --btn-text:#fff
+}
+
+body.dark {
+    --bg-color:#1c1c1c;
+    --text-color:#fff;
+    --btn-color:#ffa500;
+    --btn-text:#000
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100v;
+    margin: 0;
+    transition: background 0.3s, color 0.3;
+}
+
+.container {
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.calculator {
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: right;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    color: #000;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button.zero {
+grid-column: span 2;
+}
+
+button:nth-child(4n),
+button:last-child {
+    background-color: var(--btn-color);
+    color: var(--btn-text);
+}
+
+.theme-toggle {
+    text-align: right;
+    margin-bottom: 10px;
+}
